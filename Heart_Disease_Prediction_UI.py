@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Load the trained model (replace 'model.pkl' with your model file name)
-with open(r'Path_to_Heart_Disease_Prediction_Model.pkl', 'rb') as file:
+with open(r'Heart_Disease_Prediction_Model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Define the Streamlit app
