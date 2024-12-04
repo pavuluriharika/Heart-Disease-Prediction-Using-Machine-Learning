@@ -1,12 +1,16 @@
 # Import required libraries
+import os
 import streamlit as st
 import numpy as np
 import pickle  # For loading trained models
 import warnings
 warnings.filterwarnings("ignore")
+current_dir = os.path.dirname(__file__)
+model_path = os.path.join(current_dir,"Heart_Disease_Prediction_Model.pkl")
 
 # Load the trained model (replace 'model.pkl' with your model file name)
-with open(r'Heart-Disease-prediction-Using-Machine-Learning/Heart_Disease_Prediction_Model.pkl', 'rb') as file:
+# with open(r'Heart-Disease-prediction-Using-Machine-Learning/Heart_Disease_Prediction_Model.pkl', 'rb') as file:
+with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
 # Define the Streamlit app
